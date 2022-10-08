@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class Calculator{
 
-	public static void main(String[] args) {		
+	public static void main(String[] args) {
+		//git 테스트
 		String sign = "";
 		Scanner sc = new Scanner(System.in);
 		Calcu cal = new Calcu();
