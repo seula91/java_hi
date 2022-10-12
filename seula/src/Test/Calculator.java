@@ -11,8 +11,8 @@ public class Calculator{
 		String sign = "";
 		Scanner sc = new Scanner(System.in);
 		Calcu cal = new Calcu();
-		
-		while(true) {
+		int start = -1;
+		while(start == -1) {
 			System.out.println("계산할 숫자 A, B를 입력하세요");
 			
 			try{
@@ -56,6 +56,20 @@ public class Calculator{
 				break;
 			default:
 				System.out.print("잘못 입력하셨습니다");
+				break;
+			}
+			System.out.println("----------- - -----------");
+			System.out.println("계산을 종료하시겠습니까? (Y)");
+			System.out.println("----------- - -----------");
+			sign = sc.next();	
+			switch (sign) {
+			case "Y":
+				start = 0;
+				break;
+			case "y":
+				start = 0;
+				break;
+			default:
 				break;
 			}
 		}
