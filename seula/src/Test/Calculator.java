@@ -11,27 +11,27 @@ public class Calculator{
 		String sign = "";
 		Scanner sc = new Scanner(System.in);
 		Calcu cal = new Calcu();
-		// 숫자는 각각 물어볼 수 있게
-		System.out.println("A, B에 숫자를 입력하세요");
 		
-		try{
-		System.out.print(" A : ");
-		cal.A = sc.nextInt();
-		
-		System.out.print(" B : ");
-
-		cal.B = sc.nextInt();
-		}catch(Exception e){
-			System.out.println("숫자만 입력해주세요");
-		}
-		
-		System.out.println("사용할 사칙연산을 입력하세요~");
-		
-		System.out.print("sign (+,-,*,/) : ");
-		sign = sc.next();	
-		
-		
-		
+		while(true) {
+			System.out.println("계산할 숫자 A, B를 입력하세요");
+			
+			try{
+			System.out.print(" A : ");
+			cal.A = sc.nextInt();			
+			
+			System.out.println("B의 경우 나눗셈의 경우 0은 입력금지");
+			System.out.print(" B : ");
+			cal.B = sc.nextInt();
+			}catch(Exception e){
+				System.out.println("숫자만 입력해주세요");
+				sc.next();
+				continue;
+			}
+			System.out.println("사용할 사칙연산을 입력하세요~");
+			
+			System.out.print("sign (+,-,*,/) : ");
+			sign = sc.next();	
+			
 			switch (sign) {
 			case "+":
 				System.out.print("계산결과는 ");
@@ -47,8 +47,9 @@ public class Calculator{
 				break;
 			case "/":
 				System.out.print("계산결과는 ");
-			if(cal.B==0) {
-					System.out.print("0을 입력하지 마세요");					
+				if(cal.B==0) {
+					System.out.print("0을 입력하지 마세요");
+					continue;
 				}else {
 				System.out.println(cal.division());
 				}
@@ -57,30 +58,11 @@ public class Calculator{
 				System.out.print("잘못 입력하셨습니다");
 				break;
 			}
-	}
+		}
 			
-
-	
-		
-//		if(sign.equals("+")) {
-//			System.out.println(A+"+"+B+"="+(A+B));
-//		}
-//		else if(sign.equals("-")) {
-//			System.out.println(A+"-"+B+"="+(A-B));
-//		}
-//		else if(sign.equals("*")) {
-//			System.out.println(A+"*"+B+"="+(A*B));
-//		}
-//		else if(sign.equals("/")) {
-//			System.out.println(A+"/"+B+"="+(A/B));
-//		}
-//		else {
-//			System.out.println("can't find");
-//		}
-				
-
-		
 	}
+		
+}
 
 
 class Calcu {
