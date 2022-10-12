@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class 이번 {
 	public static void main(String[] args) {
+		
 //Q1.		
 //		for(int i=1; i<=10; i++) {
 //			System.out.print("*");
