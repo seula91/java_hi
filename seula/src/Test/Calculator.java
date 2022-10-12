@@ -5,32 +5,38 @@ import java.util.Scanner;
 public class Calculator{
 
 	public static void main(String[] args) {
+
 		//git 테스트
-		//문슬아씨 이거 만약 풀 받았다면 카톡좀요
 		//슬아씨 반복 가능하게 부탁드립니다.
 		String sign = "";
 		Scanner sc = new Scanner(System.in);
 		Calcu cal = new Calcu();
-		int start = -1;
-		while(start == -1) {
-			System.out.println("계산할 숫자 A, B를 입력하세요");
-			
-			try{
-			System.out.print(" A : ");
-			cal.A = sc.nextInt();			
-			
-			System.out.println("B의 경우 나눗셈의 경우 0은 입력금지");
-			System.out.print(" B : ");
-			cal.B = sc.nextInt();
-			}catch(Exception e){
-				System.out.println("숫자만 입력해주세요");
-				sc.next();
-				continue;
-			}
-			System.out.println("사용할 사칙연산을 입력하세요~");
-			
-			System.out.print("sign (+,-,*,/) : ");
-			sign = sc.next();	
+		
+		// 숫자는 각각 물어볼 수 있게
+		
+		while(true) {
+		
+		System.out.println("A, B에 숫자를 입력하세요");
+		
+		try{
+		System.out.print(" A : ");
+		cal.A = sc.nextInt();
+		
+		System.out.print(" B : ");
+
+		cal.B = sc.nextInt();
+		}catch(Exception e){
+			System.out.println("숫자만 입력해주세요");
+		}
+		
+		System.out.println("사용할 사칙연산을 입력하세요~");
+		
+		System.out.print("sign (+,-,*,/) : ");
+		sign = sc.next();	
+		
+		
+		
+		
 			
 			switch (sign) {
 			case "+":
@@ -47,9 +53,8 @@ public class Calculator{
 				break;
 			case "/":
 				System.out.print("계산결과는 ");
-				if(cal.B==0) {
-					System.out.print("0을 입력하지 마세요");
-					continue;
+			if(cal.B==0) {
+					System.out.print("0을 입력하지 마세요");					
 				}else {
 				System.out.println(cal.division());
 				}
@@ -57,28 +62,18 @@ public class Calculator{
 			default:
 				System.out.print("잘못 입력하셨습니다");
 				break;
-			}
-			System.out.println("----------- - -----------");
-			System.out.println("계산을 종료하시겠습니까? (Y)");
-			System.out.println("----------- - -----------");
-			sign = sc.next();	
-			switch (sign) {
-			case "Y":
-				start = 0;
-				break;
-			case "y":
-				start = 0;
-				break;
-			default:
-				break;
-			}
-		}
-			
-	}
+				
+				
 		
+		}
+		System.out.println("사칙연산을 그만하려면 'n'를 입력해주세요");
+		String n= sc.next();
+		if(n.equals("n")) {		
+			break;
+		}	
+		}
+	}
 }
-
-
 class Calcu {
 	int A,B;
 
@@ -94,6 +89,6 @@ class Calcu {
 	int division() {
 		return A/B;
 	}
-	
-
 }
+
+	
