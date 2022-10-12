@@ -12,7 +12,6 @@ public class Calculator{
 		String sign = "";
 		Scanner sc = new Scanner(System.in);
 		Calcu cal = new Calcu();
-		
 		// 숫자는 각각 물어볼 수 있게
 		
 		while(true) {
