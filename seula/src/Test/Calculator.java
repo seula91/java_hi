@@ -5,13 +5,17 @@ import java.util.Scanner;
 public class Calculator{
 
 	public static void main(String[] args) {
+
 		//git 테스트
-		//문슬아씨 이거 만약 풀 받았다면 카톡좀요
 		//슬아씨 반복 가능하게 부탁드립니다.
 		String sign = "";
 		Scanner sc = new Scanner(System.in);
 		Calcu cal = new Calcu();
+		
 		// 숫자는 각각 물어볼 수 있게
+		
+		while(true) {
+		
 		System.out.println("A, B에 숫자를 입력하세요");
 		
 		try{
@@ -32,6 +36,8 @@ public class Calculator{
 		
 		
 		
+		
+			
 			switch (sign) {
 			case "+":
 				System.out.print("계산결과는 ");
@@ -56,33 +62,19 @@ public class Calculator{
 			default:
 				System.out.print("잘못 입력하셨습니다");
 				break;
-			}
-	}
-			
-
-	
-		
-//		if(sign.equals("+")) {
-//			System.out.println(A+"+"+B+"="+(A+B));
-//		}
-//		else if(sign.equals("-")) {
-//			System.out.println(A+"-"+B+"="+(A-B));
-//		}
-//		else if(sign.equals("*")) {
-//			System.out.println(A+"*"+B+"="+(A*B));
-//		}
-//		else if(sign.equals("/")) {
-//			System.out.println(A+"/"+B+"="+(A/B));
-//		}
-//		else {
-//			System.out.println("can't find");
-//		}
 				
-
+			}
+				
 		
+		
+		System.out.println("사칙연산을 그만하려면 'n'를 입력해주세요");
+		String n= sc.next();
+		if(n.equals("n")) {		
+			break;
+		}	
+		}
 	}
-
-
+}
 class Calcu {
 	int A,B;
 
@@ -98,6 +90,6 @@ class Calcu {
 	int division() {
 		return A/B;
 	}
-	
-
 }
+
+	
