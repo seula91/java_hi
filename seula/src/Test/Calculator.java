@@ -7,6 +7,7 @@ public class Calculator{
 	public static void main(String[] args) {
 		//git 테스트
 		//문슬아씨 이거 만약 풀 받았다면 카톡좀요
+		//동욱씨 여기서 더 뭘 할까요?
 		String sign = "";
 		Scanner sc = new Scanner(System.in);
 		Calcu cal = new Calcu();
