@@ -7,11 +7,11 @@ public class Calculator{
 	public static void main(String[] args) {
 		//git 테스트
 		//문슬아씨 이거 만약 풀 받았다면 카톡좀요
-		//동욱씨 여기서 더 뭘 할까요?
+		//슬아씨 반복 가능하게 부탁드립니다.
 		String sign = "";
 		Scanner sc = new Scanner(System.in);
 		Calcu cal = new Calcu();
-		
+		// 숫자는 각각 물어볼 수 있게
 		System.out.println("A, B에 숫자를 입력하세요");
 		
 		try{
