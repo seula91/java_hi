@@ -1,7 +1,7 @@
 package Test;
 
 public class word {
-
+		//슬아씨 나의 기억이 정확하다면 class 명은 대문자로 시작해야 합니다. (권장)
 		private String eng;
 		private String kor;
 		private String jap;
